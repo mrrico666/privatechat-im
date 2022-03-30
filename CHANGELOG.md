@@ -1,5 +1,9 @@
 # Changelog
 
+### Version 2.10.2.1
+
+* Backported security fixes from 2.10.5
+
 ### Version 2.10.2
 
 * Fix crash when rendering some quotes
