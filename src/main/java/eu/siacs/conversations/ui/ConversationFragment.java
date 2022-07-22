@@ -1361,6 +1361,7 @@ public class ConversationFragment extends XmppFragment implements EditMessage.Ke
             Toast.makeText(activity, R.string.disable_tor_to_make_call, Toast.LENGTH_SHORT).show();
             return;
         }
+        //TODO ask for bluetooth_connect
         if (hasPermissions(REQUEST_START_AUDIO_CALL, Manifest.permission.RECORD_AUDIO)) {
             triggerRtpSession(RtpSessionActivity.ACTION_MAKE_VOICE_CALL);
         }
@@ -1371,6 +1372,7 @@ public class ConversationFragment extends XmppFragment implements EditMessage.Ke
             Toast.makeText(activity, R.string.disable_tor_to_make_call, Toast.LENGTH_SHORT).show();
             return;
         }
+        //TODO ask for bluetooth_connect
         if (hasPermissions(REQUEST_START_VIDEO_CALL, Manifest.permission.RECORD_AUDIO, Manifest.permission.CAMERA)) {
             triggerRtpSession(RtpSessionActivity.ACTION_MAKE_VIDEO_CALL);
         }

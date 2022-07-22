@@ -279,6 +279,7 @@ public class RtpSessionActivity extends XmppActivity
         } else {
             permissions = ImmutableList.of(Manifest.permission.RECORD_AUDIO);
         }
+        //TODO ask for bt connect
         if (PermissionUtils.hasPermission(this, permissions, REQUEST_ACCEPT_CALL)) {
             putScreenInCallMode();
             checkRecorderAndAcceptCall();
@@ -503,6 +504,7 @@ public class RtpSessionActivity extends XmppActivity
             } else if (Manifest.permission.CAMERA.equals(firstDenied)) {
                 res = R.string.no_camera_permission;
             } else {
+                //TODO ignore bluetooth_connect denial
                 throw new IllegalStateException("Invalid permission result request");
             }
             Toast.makeText(this, getString(res, getString(R.string.app_name)), Toast.LENGTH_SHORT)
